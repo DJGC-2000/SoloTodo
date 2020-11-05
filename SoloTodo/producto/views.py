@@ -38,9 +38,6 @@ def eliminarProducto(request, id):
     
 @login_required 
 def listarProductos(request):
-
-
-
     productos = Producto.objects.all()
     totalProductos = productos.__len__
     filtro = ProductosFilter(request.GET, queryset=productos)
