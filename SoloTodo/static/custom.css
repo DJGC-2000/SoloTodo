@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* footer {
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    color: white;
+} */
+
+.brand-logo {
+    width: 20%;
+    height: 100%;
+}
+
+.nav-nestor {
+    background-color: #315e85;
+}
+
+.precio {
+    font-weight: 700;
+    font-size: 18px;
+    color: #ca0000;
+}
+
+.size {
+    font-size: 14px !important;
+}
+
+.bkg-content {
+    background-color: #f1f5f9;
+}
+
+.inputbkg {
+    background-color: white !important;
+    width: 85% !important;
+    height: 38px !important;
+    border-radius: 7px !important;
+}
+
+.cursorp {
+    cursor: pointer !important;
+}
+
+.tituloBoton {
+    vertical-align: top;
+}
+
+.colorBoton {
+    color: white;
+    font-weight: bold;
+}
+
+.cerrarBoton {
+    color: white;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.subtitulomodal {
+    color: gray;
+    font-size: 11px;
+}
+
+.customFooter {
+    background-color: #315e85;
+    margin-top: auto !important;
+    padding-bottom: 1rem !important;
+    padding-top: 1rem !important
+}
