@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_filters',
     'cuenta',
     'producto',
 ]
@@ -81,11 +82,11 @@ WSGI_APPLICATION = 'SoloTodo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'solodb',
+        'NAME': 'solotododb',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': 'duoc',
         'HOST': 'localhost',
-        'PORT': '3308'
+        'PORT': '3306'
     }
 }
 
