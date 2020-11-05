@@ -1,0 +1,45 @@
+{% extends 'base/index.html' %}
+{% block main %}
+
+<br>
+<div class="row">
+  <div class="col s12 m4 l4 offset-l4 card center">
+    <h3>Registro de Usuario</h3>
+    <form class="" method="POST">
+      {% csrf_token %}
+      <div class="row">
+        <div class="input-field col s12">
+          {{formulario.first_name}}
+          <label for="">Nombre...</label>
+        </div>
+        <div class="input-field col s12">
+          {{formulario.last_name}}
+          <label for="">Apellido...</label>
+        </div>
+        <div class="input-field col s12">
+          {{formulario.email}}
+          <label for="">Email...</label>
+        </div>
+        <div class="input-field col s12">
+          {{formulario.username}}
+          <label for="">Nombre de Usuario...</label>
+        </div>
+        <div class="input-field col s12">
+          {{formulario.password1}}
+          <label for="">Contraseña...</label>
+        </div>
+        <div class="input-field col s12">
+          {{formulario.password2}}
+          <label for="">Confirmar Contraseña...</label>
+        </div>
+        <div class="input-field col s12">
+          <button class="btn waves-effect waves-light col s12" type="submit" name="action"
+          style="background-color: #315e85;">CONFIRMAR REGISTRO
+          <i class="material-icons right">send</i>
+        </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock main %}

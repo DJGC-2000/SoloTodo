@@ -1,0 +1,56 @@
+{% extends 'base/index.html' %}
+
+{% block main %}
+
+<br>
+<div class="container">
+    <h5 style="text-align: center;">
+        <b>
+            Crear producto
+        </b>
+    </h5>
+    <br>
+    <div class="row">
+        <form class="col s12 m4 l6 offset-l3 card" id="reg-form" action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row">
+                <div class="input-field col s12">
+                    {{ formulario.nombre }}
+                    <label for="Nombre:">Nombre:</label>
+                </div>
+                <div class="input-field col s12">
+                    {{ formulario.descripcion }}
+                    <label for="Descripción:">Descripción:</label>
+                </div>
+                <div class="input-field col s6">
+                    {{ formulario.marca }}
+                    <label for="Marca:">Marca:</label>
+                </div>
+                <div class="input-field col s6">
+                    {{ formulario.procedencia }}
+                    <label for="Procedencia">Procedencia:</label>
+                </div>
+                <div class="input-field col s6">
+                    {{formulario.precio}}
+                    <label for="Precio">Precio($):</label>
+                </div>
+                <div class="input-field col s6">
+                    {{formulario.stock}}
+                    <label for="Stock">Stock:</label>
+                </div>
+                <div class="input-field col s6">
+                    {{formulario.imagen}}
+                    <label for="Imagen"></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <button type="submit" class="btn green waves-effect waves-light col s12" name="action">Crear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+{% endblock main%}

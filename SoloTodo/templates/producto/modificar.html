@@ -1,0 +1,28 @@
+{% extends 'base/index.html' %}
+
+{% block main %}
+
+<br>
+<div class="container">
+    <h5 style="text-align: center;">
+        <b>
+            Modificar Producto
+        </b>
+        </h5>
+    <br>
+    <a class="waves-effect blue waves-light btn-small" href="/index/dashboard/"><i class="material-icons left">keyboard_backspace</i>Volver</a>
+    <br>
+    <br>
+        <div class="row">
+            <form class="col s12 m4 l6 offset-l3 card" id="reg-form" method="POST" enctype="multipart/form-data">
+                {{ formulario.as_p }}
+                {% csrf_token %}
+                    <div class="input-field col s12">
+                        <button type="submit" class="btn green waves-effect waves-light col s12" name="action">Modificar</button>
+                    </div>
+                </div>
+            </form>
+    </div>
+</div>
+
+{% endblock %}

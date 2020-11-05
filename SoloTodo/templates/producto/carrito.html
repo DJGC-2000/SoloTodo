@@ -1,0 +1,51 @@
+{% extends 'base/index.html' %}
+
+{% block main %}
+
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col s8">
+            <h5>Listado de productos</h5>
+            <br>
+
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img style="height: 130px" src="/imagenes/{{ pushCarro.imagen }}">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <span>Producto: {{pushCarro.nombre}}</span>
+                        <p>${{pushCarro.precio}}</p>
+                        
+                        <span>Unidades: {{pushCarro.stock}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s4">
+            <h5>Datos del despacho</h5>
+            <br>
+            <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="first_name" type="text" class="validate">
+                      <label for="first_name">Dirección</label>
+                    </div>
+                    <div class="input-field col s12">
+                      <input id="last_name" type="text" class="validate">
+                      <label for="last_name">Quién lo recibe</label>
+                    </div>
+                  </div>
+                  <a class="waves-effect waves-light btn" href="https://assaabloy.cl/wp-content/uploads/2015/01/Sodimac2.jpg"><i class="material-icons left">shopping_cart</i>Comprar</a>
+                </form>
+              </div>
+        </div>
+        
+    </div>
+
+</div>
+
+{% endblock main%}

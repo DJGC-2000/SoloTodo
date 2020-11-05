@@ -1,0 +1,53 @@
+{% extends 'base/index.html' %}
+
+{% block main %}
+
+<br>
+<div class="container">
+    <h5 style="text-align: center;">
+        <b>
+            Detalle producto
+        </b>
+        </h5>
+    <br>
+    <a class="waves-effect blue waves-light btn-small" href="/index/dashboard"><i class="material-icons left">keyboard_backspace</i>Volver</a>
+    <br>
+    <br>
+        <div class="row">
+        <form class="col s12 m4 l6 offset-l3 card" id="reg-form" method="POST">
+            <div class="row">
+                <div class="input-field col s12">
+                    <label for="Nombre">Nombre</label>  
+                    <input type="text" class="validate" disabled value="{{producto.nombre}}" required>                               
+                </div>
+                <div class="input-field col s12">
+                    <label for="Descripcion">Descripcion</label>                 
+                    <input type="text" class="validate" disabled value="{{producto.descripcion}}" required>
+                </div>
+                <div class="col s6">
+                    <label for="Marca">Marca</label>
+                    <input type="text" class="validate" disabled value="{{producto.marca}}" required>    
+                </div>
+                <div class="col s6">
+                    <label for="Procedencia">Procedencia</label>
+                    <input id="email" type="text" class="validate" disabled value="{{producto.procedencia}}" required>
+
+                </div>
+                <div class="col s6">
+                    <label for="Presio">Precio($)</label>
+                    <input id="email" type="text" class="validate" disabled value="{{producto.precio}}" required>                   
+                </div>
+                <div class="col s6">
+                    <label for="Stock">Stock</label>
+                    <input id="email" type="number" class="validate" disabled value="{{producto.stock}}" required>                    
+                </div>
+                <div class="col s12">
+                    <div class="card-image"><img src="/imagenes/{{ producto.imagen }}">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

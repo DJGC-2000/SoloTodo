@@ -1,0 +1,24 @@
+{% extends 'base/index.html' %}
+{% block main %}
+<br>
+<div class="row" style="padding: 50px;">
+  <div class="col s12 m4 l4 offset-l4 card center">
+    <h3>Recupera tu Contraseña</h3>
+    <form class="login-form" method="POST">
+      {% csrf_token %}
+
+      <div class="row">
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          {{form.email}}
+          <label for="">Ingrese su Email...</label>
+          <button class="btn waves-effect waves-light col s12" type="submit" name="action"
+          style="background-color: #315e85;">Enviar Email
+        </button>
+        </div>
+        
+    </form>
+  </div>
+</div>
+{% endblock main %}

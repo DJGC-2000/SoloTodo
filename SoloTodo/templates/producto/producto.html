@@ -1,0 +1,29 @@
+{% extends 'base/index.html' %}
+
+{% block main %}
+
+    {% if productos %}
+        <section>
+            <div class="row">
+            {% for producto in productos %}
+                <article class="col s12 m2 l3 xl2">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/imagenes/{{ producto.imagen }}">
+                        </div>
+                        <div class="card-content bkg-content"><a href="/index/detalle/{{ producto.id }}" onclick="verProducto(1,crear)"
+                                class="modal-trigger"><span class="card-title size cursorp">{{ producto.nombre }}</span></a><span
+                                class="precio">${{ producto.precio }}</span>
+                                <p>{{ producto.descripcion }}</p>
+                                <p>{{ producto.marca }}</p>
+                                <p>{{ producto.stock }}</p>
+                                <p>{{ producto.procedencia }}</p>
+                        </div>
+                        <a class="btn-small pink waves-effect waves-light col s12"  href="/index/enviarACarro/{{ producto.id }}"><i class="material-icons">add_shopping_cart</i></a>
+                    </div>
+                </article>
+            {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+{% endblock main %}

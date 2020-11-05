@@ -1,0 +1,30 @@
+<nav>
+    <div class="nav-wrapper nav-nestor">
+        <a href="/index/">
+            <img src="https://www.solotodo.cl/static/logo.svg" alt="" class="brand-logo" />
+        </a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li>
+                {% if request.user.is_authenticated %}
+                <span>Bienvenido {{request.user.username }}</span>
+                {% endif %}
+                {% if request.user.is_superuser %}
+                <a class="btn" href="/index/dashboard/">Listado Productos</a>
+                <a class="btn" href="/index/producto/"">Añadir Producto</a>
+          {% endif %}
+          {% if request.user.is_authenticated %}
+          <a class=" btn" href="/index/salir/">Cerrar Sesión</a>
+                {% else %}
+                <a class="btn" href="/index/registro/">Crear Usuario</a>
+                <a class="btn" href="/index/inicio/">Iniciar Sesión</a>
+                {% endif %}
+            </li>
+        </ul>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+        <li>
+            <a class="btn modal-trigger" href="#modal">Añadir Producto</a>
+        </li>
+    </ul>
+</nav>
