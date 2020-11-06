@@ -63,9 +63,3 @@ def salir(request):
     return redirect('/index/inicio/')
 
 #-----------------------------------------------------
-
-
-
-
-
-# Create your views here.
